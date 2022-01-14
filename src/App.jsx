@@ -13,7 +13,7 @@ import { Layout, Tabs } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
-import QuickStart from "components/QuickStart";
+// import QuickStart from "components/QuickStart";
 import Contract from "components/Contract/Contract";
 import Text from "antd/lib/typography/Text";
 import Ramper from "components/Ramper";
@@ -80,9 +80,9 @@ const App = ({ isServerInfo }) => {
 
         <div style={styles.content}>
           <Switch>
-            <Route exact path="/quickstart">
+            {/* <Route exact path="/quickstart">
               <QuickStart isServerInfo={isServerInfo} />
-            </Route>
+            </Route> */}
             <Route path="/wallet">
               <Wallet />
             </Route>
@@ -115,18 +115,18 @@ const App = ({ isServerInfo }) => {
               <Contract />
             </Route>
             <Route path="/">
-              <Redirect to="/quickstart" />
+              <Redirect to="/wallet" />
             </Route>
-            <Route path="/ethereum-boilerplate">
+            {/* <Route path="/ethereum-boilerplate">
               <Redirect to="/quickstart" />
-            </Route>
+            </Route> */}
             <Route path="/nonauthenticated">
               <>Please login using the "Authenticate" button</>
             </Route>
           </Switch>
         </div>
       </Router>
-      <Footer style={{ textAlign: "center" }}>
+      {/* <Footer style={{ textAlign: "center" }}>
         <Text style={{ display: "block" }}>
           ⭐️ Please star this{" "}
           <a href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/" target="_blank" rel="noopener noreferrer">
@@ -152,7 +152,7 @@ const App = ({ isServerInfo }) => {
             Moralis
           </a>
         </Text>
-      </Footer>
+      </Footer> */}
     </Layout>
   );
 };
